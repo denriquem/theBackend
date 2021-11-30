@@ -1,15 +1,12 @@
 import express from 'express'
 import config from 'config'
-
-
-const port = config.get("port") as number
-const host = config.get("host") as string
+import connect from './utils/connect'
 
 const app = express()
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+const port = config.get('port') as number
 
-app.listen(port, host, () => {
-    console.log(`server listening at http://${host}:${port}`)
+app.listen(port, async() => {
+    console.log('App is running')
+    await connect()
 })

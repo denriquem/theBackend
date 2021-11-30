@@ -1,6 +1,5 @@
 export default {
-    port: 1337,
+    port: 27017,
     host: 'localhost',
-    dbUri: 'mongodb://locahost:27017/rest-api',
-    
+    dbUri: 'mongodb+srv://shlomoLiquid:LiquidLiquid@thebackend.laolw.mongodb.net/theBackEnd?retryWrites=true&w=majority',
 }
