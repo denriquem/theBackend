@@ -10,6 +10,8 @@ const port = config.get("port") as number;
 
 console.log(port);
 
+app.use(express.json());
+
 app.listen(port, async () => {
 	logger.info(`App is running on port ${port}`);
 	await connect();
